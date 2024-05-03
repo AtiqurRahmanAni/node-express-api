@@ -16,7 +16,7 @@ router.get("/", checkToken, getAllUsers);
 
 router.get("/profile", checkToken, getProfile);
 
-router.post("/", checkToken, createUser);
+router.post("/", createUser);
 
 router.put("/:id", checkToken, updatedUser);
 
