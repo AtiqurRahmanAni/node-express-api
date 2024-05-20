@@ -30,7 +30,7 @@ export const login = async (req, res) => {
     maxAge: lifetime,
     httpOnly: true,
     secure: true,
-    sameSite: "None",
+    sameSite: "none",
     path: "/",
   });
   return res.status(200).json(user);
@@ -41,7 +41,7 @@ export const logout = (req, res) => {
     domain: process.env.ALLOWED_ORIGIN,
     httpOnly: true,
     secure: true,
-    sameSite: "None",
+    sameSite: "none",
     path: "/",
   });
   return res.status(200).json({ message: "Logout successful" });
