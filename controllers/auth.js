@@ -29,7 +29,7 @@ export const login = async (req, res) => {
   res.cookie("token", token, {
     maxAge: lifetime,
     httpOnly: true,
-    secure: false,
+    secure: true,
     sameSite: "None",
   });
   return res.status(200).json(user);
