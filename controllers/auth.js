@@ -30,7 +30,7 @@ export const login = async (req, res) => {
     maxAge: lifetime,
     httpOnly: true,
     secure: false,
-    sameSite: null,
+    sameSite: "None",
   });
   return res.status(200).json(user);
 };
