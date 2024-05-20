@@ -38,7 +38,6 @@ export const login = async (req, res) => {
 
 export const logout = (req, res) => {
   res.clearCookie("token", {
-    domain: process.env.ALLOWED_ORIGIN,
     httpOnly: true,
     secure: true,
     sameSite: "none",
