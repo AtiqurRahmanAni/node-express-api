@@ -29,8 +29,8 @@ export const login = async (req, res) => {
   res.cookie("token", token, {
     maxAge: lifetime,
     httpOnly: true,
-    secure: true,
-    sameSite: "none",
+    secure: false,
+    sameSite: "Lax",
     path: "/",
   });
   return res.status(200).json(user);
@@ -40,8 +40,8 @@ export const logout = (req, res) => {
   res.clearCookie("token", {
     domain: process.env.ALLOWED_ORIGIN,
     httpOnly: true,
-    secure: true,
-    sameSite: "none",
+    secure: false,
+    sameSite: "Lax",
     path: "/",
   });
   return res.status(200).json({ message: "Logout successful" });
