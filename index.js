@@ -25,6 +25,8 @@ app.use(
 );
 app.use(log);
 
+app.get("/", (req, res) => res.json({ text: "Express on Vercel" }));
+
 app.use("/users", userRoutes);
 
 app.use("/auth", authRouter);
