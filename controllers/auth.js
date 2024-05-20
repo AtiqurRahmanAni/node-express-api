@@ -31,11 +31,17 @@ export const login = async (req, res) => {
     httpOnly: true,
     secure: true,
     sameSite: "None",
+    path: "/",
   });
   return res.status(200).json(user);
 };
 
 export const logout = (req, res) => {
-  res.clearCookie("token");
+  res.clearCookie("token", {
+    httpOnly: true,
+    secure: true,
+    sameSite: "None",
+    path: "/",
+  });
   return res.status(200).json({ message: "Logout successful" });
 };
