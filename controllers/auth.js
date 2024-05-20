@@ -37,6 +37,7 @@ export const login = async (req, res) => {
 };
 
 export const logout = (req, res) => {
+  console.log(process.env.ALLOWED_ORIGIN);
   res.clearCookie("token", {
     domain: process.env.ALLOWED_ORIGIN,
     path: "/",
