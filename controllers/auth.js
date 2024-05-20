@@ -38,9 +38,7 @@ export const login = async (req, res) => {
 
 export const logout = (req, res) => {
   res.clearCookie("token", {
-    httpOnly: true,
-    secure: true,
-    sameSite: "None",
+    domain: process.env.ALLOWED_ORIGIN,
     path: "/",
   });
   return res.status(200).json({ message: "Logout successful" });
