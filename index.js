@@ -1,7 +1,7 @@
 import express from "express";
-import userRoutes from "../routes/users.js";
-import authRouter from "../routes/auth.js";
-import log from "../logger.js";
+import userRoutes from "./routes/users.js";
+import authRouter from "./routes/auth.js";
+import log from "./middlewares/logger.js";
 import cookieParser from "cookie-parser";
 import mongoose from "mongoose";
 import "dotenv/config";

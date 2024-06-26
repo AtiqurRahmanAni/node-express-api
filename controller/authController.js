@@ -1,4 +1,4 @@
-import { User } from "../mongoose/schemas/user.js";
+import User from "../model/user.js";
 import { comparePassword } from "../utils/helpers.js";
 import jwt from "jsonwebtoken";
 

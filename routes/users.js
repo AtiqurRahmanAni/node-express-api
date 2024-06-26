@@ -1,5 +1,4 @@
 import express from "express";
-import { validateUserUpdate } from "../utils/validationSchemas.js";
 import checkToken from "../middlewares/checkToken.js";
 import {
   getAllUsers,
@@ -8,7 +7,7 @@ import {
   deleteUser,
   deleteAllUsers,
   updatedUser,
-} from "../controllers/users.js";
+} from "../controller/useController.js";
 
 const router = express.Router();
 
