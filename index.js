@@ -25,7 +25,7 @@ app.use(
 );
 app.use(log);
 
-app.get("/", (req, res) => res.json({ text: "Express on Vercel" }));
+app.get("/", (req, res) => res.json({ message: "API is working" }));
 
 app.use("/users", userRoutes);
 
